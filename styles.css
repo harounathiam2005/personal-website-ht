@@ -1,0 +1,156 @@
+/* Pretty */
+
+:root {
+    --name-margin-left: 10%;
+    --nav-bar-height: 50px;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#nav-bar {
+    background-color: white;
+    height: var(--nav-bar-height);
+    width: 100%;
+    position: fixed;
+    top: 0; /* Ensure the navbar is at the very top */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+#title-block {
+    background: repeating-linear-gradient(35deg,
+    hsl(330, 3%, 86%) 0px 2px,
+    hsl(20, 6%, 91%) 0px 4px);
+    margin-top: var(--nav-bar-height);
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+#firstname {
+    font-family: 'Rubik', serif;
+    font-size: 70px;
+    position: relative;
+    left: var(--name-margin-left);
+    top: 25%;
+}
+
+#lastname {
+    position: relative;
+    font-family: 'Rubik', serif;
+    font-size: 110px;
+    left: var(--name-margin-left);
+    top: 20%;
+}
+
+#spacer {
+    position: relative;
+    font-family: 'Rubik', serif;
+    left: 40%;
+    bottom: 20%;
+    font-size: 70px;
+}
+
+.titles {
+    position: relative;
+    left: 48%;
+    width: 45%;
+    height: 15%;
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.company-logo-box {
+    border: black, solid, 1px;
+    height: 75px;
+    width: 75px;
+}
+
+.cycle-text {
+    position: absolute;
+    opacity: 0;
+    animation: cycle 9s linear infinite; /* Adjust the duration (9s) and timing as needed */
+}
+
+.cycle-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.cycle-text:nth-child(2) {
+    animation-delay: 3s; /* Adjust this based on the number of text items and duration */
+}
+
+.cycle-text:nth-child(3) {
+    animation-delay: 6s; /* Adjust this based on the number of text items and duration */
+}
+
+@keyframes cycle {
+    0%, 100% { opacity: 0; }
+    10%, 30% { opacity: 1; } /* Each keyframe represents 1/4 of the total animation duration */
+    40%, 90% { opacity: 0; }
+}
+
+/*
+#scroll-container {
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow : hidden;
+    width: 50%;
+    position: relative;
+    left: 43%;
+    bottom: 60%;
+    height: 50px;
+  }
+
+#scroll-text {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    font-family: 'Rubik', serif;
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+*/
+
+h1 {
+    margin: 0;
+    font-family: 'Nunito Sans', serif;
+}
