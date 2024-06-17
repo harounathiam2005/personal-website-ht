@@ -4,7 +4,7 @@ document.addEventListener('scroll', function() {
     const maxBlur = 2; // maximum blur value
 
     // Calculate blur amount based on scroll position
-    const blurAmount = Math.min(scrollPosition / 50, maxBlur);
+    const blurAmount = Math.min(scrollPosition / 100, maxBlur);
     titleBlock.style.filter = `blur(${blurAmount}px)`;
 })
 
