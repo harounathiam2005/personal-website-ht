@@ -1,11 +1,33 @@
 document.addEventListener('scroll', function() {
+    const navBar = document.getElementById('nav-bar');
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > 1) {
+        navBar.style.filter = 'box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);'
+    }
+    else {
+        navBar.style.filter = 'box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0);'
+    }
+
+    
+
+})
+
+document.addEventListener('scroll', function() {
     const titleBlock = document.getElementById('title-block');
+    const statements = document.querySelectorAll('.statement');
     const scrollPosition = window.scrollY;
     const maxBlur = 2; // maximum blur value
 
     // Calculate blur amount based on scroll position
     const blurAmount = Math.min(scrollPosition / 100, maxBlur);
     titleBlock.style.filter = `blur(${blurAmount}px)`;
+
+    statements.forEach(function(statement) {
+        statement.style.filter = `blur(${blurAmount}px)`;
+        console.log("**")
+    })
+    
 })
 
 document.addEventListener('scroll', function() {
