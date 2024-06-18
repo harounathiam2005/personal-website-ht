@@ -1,17 +1,14 @@
 document.addEventListener('scroll', function() {
     const navBar = document.getElementById('nav-bar');
-    const scrollPosition = window.scrollY;
-    
-    if (scrollPosition > 1) {
-        navBar.style.filter = 'box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);'
-    }
-    else {
-        navBar.style.filter = 'box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0);'
-    }
+    const shadowClass = 'shadow';
+    const scrollThreshold = 10; // Adjust this value as needed
 
-    
-
-})
+    if (window.scrollY > scrollThreshold) {
+        navBar.classList.add(shadowClass);
+    } else {
+        navBar.classList.remove(shadowClass);
+    }
+});
 
 document.addEventListener('scroll', function() {
     const titleBlock = document.getElementById('title-block');
