@@ -122,6 +122,7 @@ body {
 }
 
 .triangle {
+    position: absolute;
     width: 0;
     height: 0;
     border-left: 15px solid transparent;

@@ -50,7 +50,33 @@ document.addEventListener('scroll', function() {
     });
 });
 
+document.addEventListener('scroll', function() {
+    const triangle = document.querySelector('.triangle');
+    const scrollPosition = window.scrollY;
 
+    // Adjust the movement factor as needed
+    const movementFactor = .1;
+
+    // Calculate the new top position for the triangle
+    const newTopPosition = 590 + scrollPosition * movementFactor;
+
+    // Apply the new top position
+    triangle.style.top = `${newTopPosition}px`;
+});
+
+document.addEventListener('scroll', function() {
+    const circle = document.querySelector('.circle');
+    const scrollPosition = window.scrollY;
+
+    // Adjust the movement factor as needed
+    const movementFactor = .05;
+
+    // Calculate the new top position for the triangle
+    const newTopPosition = 590 + scrollPosition * movementFactor;
+
+    // Apply the new top position
+    circle.style.top = `${newTopPosition}px`;
+});
 
 document.addEventListener('scroll', function() {
     const logoBoxes = document.querySelectorAll('.company-logo-box');
