@@ -3,6 +3,7 @@
 :root {
     --name-margin-left: 10%;
     --nav-bar-height: 50px;
+    --logo-square-dim: 75px;
 }
 
 body {
@@ -72,11 +73,15 @@ body {
     align-items: center; /* Center vertically */
 }
 
+.logo {
+    width: var(--logo-square-dim);
+    height: var(--logo-square-dim);
+}
+
 .company-logo-box {
     position: absolute;
-    border: black, solid, 1px;
-    height: 75px;
-    width: 75px;
+    height: var(--logo-square-dim);
+    width: var(--logo-square-dim);
     top: 1250px;
     opacity: 0;
     transition: opacity 1s ease-in-out, bottom 0.5s ease-in-out; /* Smooth transition */
