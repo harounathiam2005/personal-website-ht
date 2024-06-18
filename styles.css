@@ -33,7 +33,7 @@ body {
     position: absolute;
     width: 100%;
     height: 350px;
-    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+    transition: filter 0.5s ease; /* Smooth transition for blur effect */
 }
 
 #firstname {
@@ -78,6 +78,17 @@ body {
     height: 75px;
     width: 75px;
     top: 1250px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, bottom 0.5s ease-in-out; /* Smooth transition */
+}
+
+.company-logo-box.visible {
+    opacity: 1; /* Make visible */
+    position: absolute;
+}
+
+.company-logo-box.stick {
+    position: fixed; /* Make visible */
 }
 
 .cycle-text {
