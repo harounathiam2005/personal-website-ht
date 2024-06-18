@@ -4,6 +4,8 @@
     --name-margin-left: 10%;
     --nav-bar-height: 50px;
     --logo-square-dim: 75px;
+    --shape-height: 30px;
+    --global-accent: rgb(118, 204, 251);
 }
 
 body {
@@ -75,7 +77,7 @@ body {
 .statement {
     font-size: 60px;
     z-index: -100;
-    transition: filter 0.3s ease;
+    transition: filter 0.1s ease;
 }
 
 .titles {
@@ -88,6 +90,40 @@ body {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+}
+
+#shape-container {
+    width: 30%;
+}
+
+.shape {
+    width: 30px;
+    height: 30px;
+    margin: 50px;
+    position: absolute;
+    border-radius: 3px;
+    top: 590px;
+    z-index: -200;
+}
+
+.square {
+    background-color: rgb(230, 229, 229);
+    left: 40%;
+}
+
+.circle {
+    background-color:  rgb(230, 229, 229);
+    border-radius: 50%;
+    left: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid rgb(230, 229, 229);
+    left: 45%;
 }
 
 .logo {

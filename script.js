@@ -40,6 +40,22 @@ document.addEventListener('scroll', function() {
 })
 
 document.addEventListener('scroll', function() {
+    const shapes = document.querySelectorAll('.shape');
+    const scrollPosition = window.scrollY;
+    const maxBlur = 2; // maximum blur value
+
+    const blurAmount = Math.min(scrollPosition / 100, maxBlur);
+    
+    shapes.forEach((shape, index) => {
+        const rotation = scrollPosition / 3; // Adjust this value for desired rotation speed
+        shape.style.transform = `rotate(${rotation}deg)`;
+        shape.style.filter = `blur(${blurAmount}px)`;
+    });
+});
+
+
+
+document.addEventListener('scroll', function() {
     const logoBoxes = document.querySelectorAll('.company-logo-box');
     const scrollPosition = window.scrollY;
     const triggerPositionVisible = 800; // Adjust this value based on when you want the box to appear
