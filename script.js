@@ -117,8 +117,6 @@ document.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     const triggerPositionVisible = 1400;
     const triggerPositionStick = 1400;
-    const movement = getComputedStyle(document.documentElement)
-    .getPropertyValue('--statement-text-movement');
 
     const elementTop = numbersText.getBoundingClientRect().top + scrollPosition;
 
@@ -137,6 +135,25 @@ document.addEventListener('scroll', function() {
     else {
         numbersText.classList.remove('stick');
         numbersText.style.top = '';
+    }
+
+});
+
+document.addEventListener('scroll', function() {
+    const scholarship = document.getElementById('scholarship');
+    const scrollPosition = window.scrollY;
+    const triggerPositionStick = 1500;
+
+    const elementTop = scholarship.getBoundingClientRect().top + scrollPosition;
+
+    if (scrollPosition >= triggerPositionStick) {
+        scholarship.classList.add('stick');
+        const newTopPosition = elementTop - scrollPosition;
+        scholarship.style.top = `${newTopPosition}px`;
+    }
+    else {
+        scholarship.classList.remove('stick');
+        scholarship.style.top = '';
     }
 
 });

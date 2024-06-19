@@ -3,7 +3,7 @@
 :root {
     --name-margin-left: 10%;
     --nav-bar-height: 50px;
-    --logo-square-dim: 75px;
+    --logo-square-dim: 5vw;
     --shape-height: 30px;
     --global-accent: rgb(118, 204, 251);
     --text-theme-color: rgb(144, 144, 144);
@@ -143,6 +143,8 @@ body {
     position: absolute;
     height: var(--logo-square-dim);
     width: var(--logo-square-dim);
+    border-radius: 5px;
+    overflow: hidden;
     top: 1250px;
     opacity: 0;
     transition: opacity 1s ease-in-out, bottom 0.5s ease-in-out; /* Smooth transition */
@@ -201,6 +203,28 @@ body {
     position: fixed;
     left: var(--statement-text-movement);
     top: 1700px;
+    width: 100%;
+}
+
+#scholarship-box {
+    position: absolute;
+    top: 2000px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#scholarship {
+    position: absolute;
+    font-size: 9vw;
+    color: var(--global-accent);
+    transition: bottom 0.5s ease-in;
+}
+
+#scholarship.stick {
+    position: fixed;
+    top: 2000px;
     width: 100%;
 }
 
