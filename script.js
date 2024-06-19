@@ -115,7 +115,7 @@ document.addEventListener('scroll', function() {
 document.addEventListener('scroll', function() {
     const numbersText = document.getElementById('numbers-text');
     const scrollPosition = window.scrollY;
-    const triggerPositionVisible = 1150;
+    const triggerPositionVisible = 1400;
     const triggerPositionStick = 1400;
     const movement = getComputedStyle(document.documentElement)
     .getPropertyValue('--statement-text-movement');
