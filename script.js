@@ -1,4 +1,9 @@
 document.addEventListener('scroll', function() {
+    // telemetry
+    console.log(window.scrollY)
+})
+
+document.addEventListener('scroll', function() {
     const navBar = document.getElementById('nav-bar');
     const shadowClass = 'shadow';
     const scrollThreshold = 10; // Adjust this value as needed
@@ -22,7 +27,6 @@ document.addEventListener('scroll', function() {
 
     statements.forEach(function(statement) {
         statement.style.filter = `blur(${blurAmount}px)`;
-        console.log("**")
     })
     
 })
@@ -106,5 +110,34 @@ document.addEventListener('scroll', function() {
             logoBox.style.top = ''; // Reset to initial position
         }
     });
+});
+
+document.addEventListener('scroll', function() {
+    const numbersText = document.getElementById('numbers-text');
+    const scrollPosition = window.scrollY;
+    const triggerPositionVisible = 1150;
+    const triggerPositionStick = 1400;
+    const movement = getComputedStyle(document.documentElement)
+    .getPropertyValue('--statement-text-movement');
+
+    const elementTop = numbersText.getBoundingClientRect().top + scrollPosition;
+
+    if (scrollPosition >= triggerPositionVisible) {
+        numbersText.classList.add('visible-move');
+    }
+    else {
+        numbersText.classList.remove('visible-move');
+    }
+
+    if (scrollPosition >= triggerPositionStick) {
+        numbersText.classList.add('stick');
+        const newTopPosition = elementTop - scrollPosition;
+        numbersText.style.top = `${newTopPosition}px`;
+    }
+    else {
+        numbersText.classList.remove('stick');
+        numbersText.style.top = '';
+    }
+
 });
 

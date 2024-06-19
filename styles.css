@@ -6,6 +6,8 @@
     --logo-square-dim: 75px;
     --shape-height: 30px;
     --global-accent: rgb(118, 204, 251);
+    --text-theme-color: rgb(144, 144, 144);
+    --statement-text-movement: 13%;
 }
 
 body {
@@ -38,14 +40,14 @@ body {
     hsl(20, 6%, 91%) 0px 4px);
     margin-top: var(--nav-bar-height);
     position: absolute;
-    width: 100%;
-    height: 350px;
+    width: 100vw;
+    height: 23vw;
     transition: filter 0.5s ease; /* Smooth transition for blur effect */
 }
 
 #firstname {
     font-family: 'Rubik', serif;
-    font-size: 70px;
+    font-size: 4.25vw;
     position: relative;
     left: var(--name-margin-left);
     top: 25%;
@@ -54,9 +56,22 @@ body {
 #lastname {
     position: relative;
     font-family: 'Rubik', serif;
-    font-size: 110px;
+    font-size: 6.7vw;
     left: var(--name-margin-left);
     top: 20%;
+}
+
+.titles {
+    position: relative;
+    left: 48%;
+    width: 45%;
+    height: 15%;
+    font-size: 1vw;
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 #spacer {
@@ -79,21 +94,9 @@ body {
 }
 
 .statement {
-    font-size: 60px;
+    font-size: 3.4vw;
     z-index: -100;
     transition: filter 0.1s ease;
-}
-
-.titles {
-    position: relative;
-    left: 48%;
-    width: 45%;
-    height: 15%;
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
 }
 
 #shape-container {
@@ -176,6 +179,29 @@ body {
     0%, 100% { opacity: 0; }
     10%, 30% { opacity: 1; } /* Each keyframe represents 1/4 of the total animation duration */
     40%, 90% { opacity: 0; }
+}
+
+#numbers-text {
+    font-size: 3vw;
+    position: absolute;
+    left: 0;
+    top: 1700px;
+    opacity: 0;
+    color: var(--text-theme-color);
+    transition: opacity 0.5s ease-in, left 1s ease-in-out, bottom 0.5s ease-in;
+}
+
+#numbers-text.visible-move {
+    opacity: 1;
+    left: var(--statement-text-movement);
+    top: 1700px;
+}
+
+#numbers-text.stick {
+    position: fixed;
+    left: var(--statement-text-movement);
+    top: 1700px;
+    width: 100%;
 }
 
 /*
