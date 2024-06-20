@@ -140,7 +140,7 @@ document.addEventListener('scroll', function() {
 });
 
 document.addEventListener('scroll', function() {
-    const scholarship = document.getElementById('scholarship');
+    const scholarship = document.getElementById('scholarship-box');
     const scrollPosition = window.scrollY;
     const triggerPositionStick = 1500;
 

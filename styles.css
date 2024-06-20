@@ -213,16 +213,18 @@ body {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    border: 1px, black, dotted;
+    height: 9vw;
+    transition: bottom 0.5s ease-in;
 }
 
 #scholarship {
     position: absolute;
     font-size: 9vw;
     color: var(--global-accent);
-    transition: bottom 0.5s ease-in;
 }
 
-#scholarship.stick {
+#scholarship-box.stick {
     position: fixed;
     top: 2000px;
     width: 100%;
