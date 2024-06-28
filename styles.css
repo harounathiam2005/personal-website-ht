@@ -99,6 +99,15 @@ body {
     font-size: 5vw;
 }
 
+.gill {
+    border-radius: 15px;
+    width: 10px;
+    height: 70px;
+    position: fixed;
+    transform: rotate(30deg);
+    background-color: rgb(226, 226, 226);
+}
+
 #statement-box {
     position: relative;
     width: 100%;
