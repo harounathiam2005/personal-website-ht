@@ -62,7 +62,7 @@ document.addEventListener('scroll', function() {
     const movementFactor = .1;
 
     // Calculate the new top position for the triangle
-    const newTopPosition = 590 + scrollPosition * movementFactor;
+    const newTopPosition = scrollPosition * movementFactor;
 
     // Apply the new top position
     triangle.style.top = `${newTopPosition}px`;
@@ -76,7 +76,7 @@ document.addEventListener('scroll', function() {
     const movementFactor = .05;
 
     // Calculate the new top position for the triangle
-    const newTopPosition = 590 + scrollPosition * movementFactor;
+    const newTopPosition = scrollPosition * movementFactor;
 
     // Apply the new top position
     circle.style.top = `${newTopPosition}px`;
@@ -140,20 +140,28 @@ document.addEventListener('scroll', function() {
 });
 
 document.addEventListener('scroll', function() {
-    const scholarship = document.getElementById('scholarship-box');
+    const scholarshipBox = document.getElementById('scholarship-box');
     const scrollPosition = window.scrollY;
-    const triggerPositionStick = 1500;
+    const triggerPositionStick = 1600;
+    const triggerPositionVisible = 1600;
 
-    const elementTop = scholarship.getBoundingClientRect().top + scrollPosition;
+    const elementTop = scholarshipBox.getBoundingClientRect().top + scrollPosition;
 
     if (scrollPosition >= triggerPositionStick) {
-        scholarship.classList.add('stick');
+        scholarshipBox.classList.add('stick');
         const newTopPosition = elementTop - scrollPosition;
-        scholarship.style.top = `${newTopPosition}px`;
+        scholarshipBox.style.top = `${newTopPosition}px`;
     }
     else {
-        scholarship.classList.remove('stick');
-        scholarship.style.top = '';
+        scholarshipBox.classList.remove('stick');
+        scholarshipBox.style.top = '';
+    }
+
+    if (scrollPosition >= triggerPositionVisible) {
+        scholarshipBox.classList.add('visible');
+    }
+    else {
+        scholarshipBox.classList.remove('visible');
     }
 
 });
