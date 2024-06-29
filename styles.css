@@ -11,6 +11,10 @@
     --test-border: 1px, solid, black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: white;
     margin: 0;
@@ -239,6 +243,7 @@ body {
 }
 
 #scholarship-box {
+    /* border: var(--test-border); */
     position: absolute;
     top: 2000px;
     width: 100%;
@@ -267,6 +272,33 @@ body {
     position: absolute;
     font-size: 9vw;
     color: var(--global-accent);
+}
+
+#by-text {
+    font-size: 2vw;
+    position: relative;
+    left: 8%;
+    color: var(--text-theme-color);
+    transition: opacity 0.5s ease-in, left 1s ease-in-out, bottom 0.5s ease-in;
+    top: 70%;
+}
+
+#by-text-2 {
+    font-size: 2vw;
+    position: relative;
+    left: 0;
+    color: var(--text-theme-color);
+    transition: opacity 0.5s ease-in, left 1s ease-in-out, bottom 0.5s ease-in;
+    top: 100%;
+}
+
+#background-circle {
+    position: absolute;
+    background-color:  rgb(129, 129, 129);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: 3500px;
 }
 
 /*

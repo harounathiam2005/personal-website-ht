@@ -85,14 +85,15 @@ document.addEventListener('scroll', function() {
 document.addEventListener('scroll', function() {
     const logoBoxes = document.querySelectorAll('.company-logo-box');
     const scrollPosition = window.scrollY;
-    const triggerPositionVisible = 800; // Adjust this value based on when you want the box to appear
-    const triggerPositionStick = 1100;
+    const triggerPositionVisible = 800;
+    const triggerPositionInvisible = 2500;
+    const triggerPosition = 1100;
     const movement = scrollPosition / 1.5;
 
     logoBoxes.forEach(function(logoBox, index) {
         const elementTop = logoBox.getBoundingClientRect().top + scrollPosition; // Element's top position in the document
         
-        if (scrollPosition >= triggerPositionVisible) {
+        if (scrollPosition >= triggerPositionVisible  && scrollPosition <= triggerPositionInvisible) {
             logoBox.classList.add('visible');
             logoBox.style.top = `${movement}px`;
             // Adjust the fixed position to move with the viewport
@@ -100,7 +101,7 @@ document.addEventListener('scroll', function() {
             logoBox.classList.remove('visible');
         }
 
-        if (scrollPosition >= triggerPositionStick) {
+        if (scrollPosition >= triggerPosition) {
             logoBox.classList.add('stick');
             // Adjust the fixed position to move with the viewport
             const newTopPosition = elementTop - scrollPosition;
@@ -116,18 +117,20 @@ document.addEventListener('scroll', function() {
     const numbersText = document.getElementById('numbers-text');
     const scrollPosition = window.scrollY;
     const triggerPositionVisible = 1400;
-    const triggerPositionStick = 1400;
+    const triggerPositionInvisible = 2100;
+    const triggerPositionUnstick = 3000;
+    const triggerPosition = 1400;
 
     const elementTop = numbersText.getBoundingClientRect().top + scrollPosition;
 
-    if (scrollPosition >= triggerPositionVisible) {
+    if ((scrollPosition >= triggerPositionVisible) && (scrollPosition <= triggerPositionInvisible)) {
         numbersText.classList.add('visible-move');
     }
     else {
         numbersText.classList.remove('visible-move');
     }
 
-    if (scrollPosition >= triggerPositionStick) {
+    if (scrollPosition >= triggerPosition  && scrollPosition <= triggerPositionUnstick) {
         numbersText.classList.add('stick');
         const newTopPosition = elementTop - scrollPosition;
         numbersText.style.top = `${newTopPosition}px`;
@@ -144,10 +147,12 @@ document.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     const triggerPositionStick = 1600;
     const triggerPositionVisible = 1600;
+    const triggerPositionInvisible = 2100;
+    const triggerPositionUnstick = 4000;
 
     const elementTop = scholarshipBox.getBoundingClientRect().top + scrollPosition;
 
-    if (scrollPosition >= triggerPositionStick) {
+    if ((scrollPosition >= triggerPositionStick) && (scrollPosition <= triggerPositionUnstick)) {
         scholarshipBox.classList.add('stick');
         const newTopPosition = elementTop - scrollPosition;
         scholarshipBox.style.top = `${newTopPosition}px`;
@@ -157,12 +162,13 @@ document.addEventListener('scroll', function() {
         scholarshipBox.style.top = '';
     }
 
-    if (scrollPosition >= triggerPositionVisible) {
+    if ((scrollPosition >= triggerPositionVisible) && (scrollPosition <= triggerPositionInvisible)) {
         scholarshipBox.classList.add('visible');
+        console.log("true");
     }
     else {
         scholarshipBox.classList.remove('visible');
+        console.log("false");
     }
 
 });
-
