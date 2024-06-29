@@ -182,18 +182,24 @@ document.addEventListener('scroll', function() {
         backgroundSheet.style.animation = 'reduceWidth 2s forwards';
     }
     else {
-        backgroundSheet.style.animation = 'increaseWidth 3s backwards';
+        backgroundSheet.style.animation = 'increaseWidth 2s forwards';
     }
 
 });
 
 document.addEventListener('scroll', function() {
     const body = document.body;
+    const navBar = document.getElementById('nav-bar');
     const scrollPosition = window.scrollY;
     let targetPosition = 2800;
 
     if (scrollPosition >= targetPosition) {
-        body.style.backgroundColor = 'blue';
+        body.style.animation = 'colorShift 3s forwards';
+        navBar.style.animation = 'colorShift 3s forwards';
+    }
+    else {
+        body.style.animation = 'colorShiftBack 1s forwards';
+        navBar.style.animation = 'colorShiftBack 1s forwards';
     }
 
 });

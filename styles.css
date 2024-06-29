@@ -24,6 +24,24 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes colorShift {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: var(--global-accent);
+    }
+}
+
+@keyframes colorShiftBack {
+    from {
+        background-color: var(--global-accent);
+    }
+    to {
+        background-color: white;
+    }
+}
+
 #nav-bar {
     background-color: white;
     height: var(--nav-bar-height);
@@ -120,12 +138,12 @@ body {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    z-index: -100;
+    z-index: -50;
 }
 
 .statement {
     font-size: 3.4vw;
-    z-index: -100;
+    z-index: -50;
     transition: filter 0.1s ease;
 }
 
@@ -146,7 +164,7 @@ body {
     margin: 50px;
     position: absolute;
     border-radius: 3px;
-    z-index: -200;
+    z-index: -50;
 }
 
 .square {
@@ -325,7 +343,7 @@ body {
 
 @keyframes increaseWidth {
     from {
-        width: 0%;
+        width: 0;
     }
     to {
         width: 100%;
