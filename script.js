@@ -172,3 +172,28 @@ document.addEventListener('scroll', function() {
     }
 
 });
+
+document.addEventListener('scroll', function() {
+    const backgroundSheet = document.getElementById('background-sheet');
+    const scrollPosition = window.scrollY;
+    let targetPosition = 2800;
+
+    if (scrollPosition >= targetPosition) {
+        backgroundSheet.style.animation = 'reduceWidth 2s forwards';
+    }
+    else {
+        backgroundSheet.style.animation = 'increaseWidth 3s backwards';
+    }
+
+});
+
+document.addEventListener('scroll', function() {
+    const body = document.body;
+    const scrollPosition = window.scrollY;
+    let targetPosition = 2800;
+
+    if (scrollPosition >= targetPosition) {
+        body.style.backgroundColor = 'blue';
+    }
+
+});
