@@ -42,17 +42,11 @@ body {
     }
 }
 
-@keyframes cycle {
-    0%, 100% { opacity: 0; }
-    10%, 30% { opacity: 1; } /* Each keyframe represents 1/4 of the total animation duration */
-    40%, 90% { opacity: 0; }
-}
-
 #nav-bar {
     background-color: white;
     height: var(--nav-bar-height);
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0; /* Ensure the navbar is at the very top */
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
@@ -107,24 +101,6 @@ body {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-}
-
-.cycle-text {
-    position: absolute;
-    opacity: 0;
-    animation: cycle 6s linear infinite; /* Adjust the duration (9s) and timing as needed */
-}
-
-.cycle-text:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.cycle-text:nth-child(2) {
-    animation-delay: 2s; /* Adjust this based on the number of text items and duration */
-}
-
-.cycle-text:nth-child(3) {
-    animation-delay: 4s; /* Adjust this based on the number of text items and duration */
 }
 
 #titles-container {
@@ -213,24 +189,16 @@ body {
 }
 
 #middle-container {
-    top: 1250px;
+    top: 3700px;
     position: absolute;
     border: var(--test-border);
     width: 100%;
-    height: 3000px;
+    height: 600px;
 }
 
 .logo {
     width: var(--logo-square-dim);
     height: var(--logo-square-dim);
-}
-
-#logo-container {
-    position: sticky;
-    height: var(--logo-square-dim);
-    width: 100%;
-    border: var(--test-border);
-    top: 150px;
 }
 
 .company-logo-box {
@@ -239,71 +207,62 @@ body {
     width: var(--logo-square-dim);
     border-radius: 5px;
     overflow: hidden;
+    top: 1250px;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth transition */
+    transition: opacity 1s ease-in-out, bottom 0.5s ease-in-out; /* Smooth transition */
 }
 
 .company-logo-box.visible {
-    opacity: 1;
+    opacity: 1; /* Make visible */
     position: absolute;
+}
+
+.company-logo-box.stick {
+    position: fixed; /* Make visible */
+}
+
+.cycle-text {
+    position: absolute;
+    opacity: 0;
+    animation: cycle 9s linear infinite; /* Adjust the duration (9s) and timing as needed */
+}
+
+.cycle-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.cycle-text:nth-child(2) {
+    animation-delay: 3s; /* Adjust this based on the number of text items and duration */
+}
+
+.cycle-text:nth-child(3) {
+    animation-delay: 6s; /* Adjust this based on the number of text items and duration */
+}
+
+@keyframes cycle {
+    0%, 100% { opacity: 0; }
+    10%, 30% { opacity: 1; } /* Each keyframe represents 1/4 of the total animation duration */
+    40%, 90% { opacity: 0; }
 }
 
 #numbers-text {
     font-size: 3vw;
-    position: sticky;
-    top: 300px;
-    opacity: 0;
-    color: var(--text-theme-color);
-    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out;
-}
-
-#numbers-text.visible-move {
-    opacity: 1;
-    margin-left: 15%;
-}
-/*
-@keyframes moveLeft {
-    from {
-        margin-left: 0;
-    }
-    to {
-        margin-left: var(--statement-text-movement);
-    }
-} 
-*/
-
-#middle-container-2 {
-    top: 1600px;
     position: absolute;
-    border: var(--test-border);
-    width: 100%;
-    height: 2000px;
-}
-
-#description-box {
-    width: 60%;
-    height: 350px;
-    box-shadow: 0 4px 6px -1px rgba(0.2, 0.2, 0.2, 0.2);
-    border-radius: 15px;
-    position: sticky;
-    top: 50%;
+    left: var(--statement-text-movement);
+    top: 1700px;
     opacity: 0;
-    color: black; /* Example color */
-    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out;
-}
-
-#description-box.visible-move {
-    opacity: 1;
-    margin-left: 20%; /* Move to the center */
-}
-
-#about-me {
     color: var(--text-theme-color);
-    font-size: 1.5vw;
-}s
+    transition: opacity 0.5s ease-in, left 1s ease-in-out, bottom 0.5s ease-in;
+}
 
-#highlights {
-    color: var(--global-accent);
+#numbers-text.visible {
+    opacity: 1;
+}
+
+#numbers-text.stick {
+    position: fixed;
+    left: var(--statement-text-movement);
+    width: 100%;
 }
 
 #scholarship-box {
@@ -318,7 +277,6 @@ body {
     /* border: 1px, black, dotted; */
     height: 9vw;
     transition: opacity 0.7s ease-in, bottom 0.5s ease-in;
-    border: var(--test-border);
 }
 
 #scholarship-box.stick {
@@ -397,7 +355,7 @@ body {
 #projects-title {
     color: white;
     position: -webkit-sticky;
-    position: absolute;
+    position: sticky;
     border: var(--test-border);
     /* border: var(--test-border); */
     width: 100vw;
@@ -406,7 +364,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.5vw;
-    top: 3500px;
+    top: 50px;
 }
 
 .line {
@@ -465,9 +423,5 @@ body {
 
 h1 {
     margin: 0;
-    font-family: 'Nunito Sans', serif;
-}
-
-p {
     font-family: 'Nunito Sans', serif;
 }

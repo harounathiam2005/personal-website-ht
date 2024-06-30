@@ -64,50 +64,43 @@
             <div class="shape circle" style="left: 43%"></div>
             <div class="shape triangle" style="right: 43%"></div>
         </div>
-        <div id="middle-container">
-            <div id="logo-container">
-                <div class="company-logo-box" style="left: 23%;">
-                    <img class="logo" src=".\assets\In-Blue-128.png">
-                </div>
-                <div class="company-logo-box" style="left: 33%;">
-                    <img class="logo" src=".\assets\amazon-logo.png">
-                </div>
-                <div class="company-logo-box" style="left: 43%;">
-                    <img class="logo" src=".\assets\jane-street-logo.jpg">
-                </div>
-                <div class="company-logo-box" style="left: 53%;">
-                    <img class="logo" src=".\assets\zsuite-logo.png">
-                </div>
-                <div class="company-logo-box" style="left: 63%;">
-                    <img class="logo" src=".\assets\duke-logo.jpg">
-                </div>
-                <div class="company-logo-box" style="left: 73%;">
-                    <img class="logo" src=".\assets\rice-logo.png">
-                </div>
+        <!-- <div id="middle-container"> -->
+            <div class="company-logo-box" style="left: 23%;">
+                <img class="logo" src=".\assets\In-Blue-128.png">
             </div>
-            <h1 id="numbers-text">About Me</h1>
+            <div class="company-logo-box" style="left: 33%;">
+                <img class="logo" src=".\assets\amazon-logo.png">
+            </div>
+            <div class="company-logo-box" style="left: 43%;">
+                <img class="logo" src=".\assets\jane-street-logo.jpg">
+            </div>
+            <div class="company-logo-box" style="left: 53%;">
+                <img class="logo" src=".\assets\zsuite-logo.png">
+            </div>
+            <div class="company-logo-box" style="left: 63%;">
+                <img class="logo" src=".\assets\duke-logo.jpg">
+            </div>
+            <div class="company-logo-box" style="left: 73%;">
+                <img class="logo" src=".\assets\rice-logo.png">
+            </div>
+            <h1 id="numbers-text">let's go by the numbers:</h1>
+            <p style="margin-top: 10000px;">.</p>
+            <div id="scholarship-box">
+                <h1 id="scholarship">$213,000+</h1>
+                <h1 id="by-text">in grants</h1>
+                <h1 id="by-text-2">from Amazon, LinkedIn, Jane Street, and other tech companies</h1>
+            <!-- </div> -->
         </div>
         <div id="background-sheet"></div>
-        <div id="middle-container-2">
-            <div id="description-box">
-                <p id="about-me" style="padding: 30px;">I'm Harouna, an undergraduate at Duke University. 
-                    I find passion in creating refined and scalable software products. My interest in software 
-                    development begain with my high school's robotics team, where I had the opportunity to 
-                    contribute to the team's robot code. Later during my junior year, I had the privalege to 
-                    assist in the creation of an LLM software application at a financial technology company 
-                    during an internship during my junior year. Among other experiences from hackathons to 
-                    summits and mentorships, I've built my repertoire of languages, frameworks, and skills.</p>
-                <p id="about-me" style="padding: 30px; padding-top: 0;"> At this stage in my career, I'm excited see what projects I may be able to put my skills towards.</p>
-            </div>
+        <div id="middle-container">
+            <div id="projects-title"><h1>Some Projects</h1></div>
         </div>
-            <div id="projects-title"><h1>Some Projects 🚀</h1></div>
-        
         
         
         
         <!--
         -->
         
-        <p style="margin-top: 10000px;">.</p>
+
     </body>
 </html>
