@@ -317,7 +317,7 @@ body {
 
 #linkedin-figure.visible-move {
     opacity: 1;
-    margin-left: 15%; /* Move to the center */
+    margin-left: 12%; /* Move to the center */
 }
 
 #amazon-figure {
@@ -331,7 +331,7 @@ body {
 
 #amazon-figure.visible-move {
     opacity: 1;
-    margin-left: 15%; /* Move to the center */
+    margin-left: 12%; /* Move to the center */
 }
 
 #scholarship-figure {
@@ -345,7 +345,7 @@ body {
 
 #scholarship-figure.visible-move {
     opacity: 1;
-    margin-left: 15%; /* Move to the center */
+    margin-left: 12%; /* Move to the center */
 }
 
 #scholarship {
@@ -430,7 +430,6 @@ body {
 
 #projects-title {
     color: white;
-    position: -webkit-sticky;
     position: absolute;
     width: 100vw;
     height: 75px;
@@ -442,8 +441,75 @@ body {
 }
 
 .line {
-    width: 1px;
-    border: solid, aquamarine, 1px;
+    width: 50px;
+    border: solid, rgb(255, 255, 255), 1px;
+}
+
+#project-box-1 {
+    position: absolute;
+    width: 55%;
+    height: 50%;
+    border: solid, red, 3px;
+    top: 5200px;
+    left: 35%;
+}
+
+#project-box-1.visible {
+    opacity: 1;
+}
+
+#project-box-2 {
+    position: absolute;
+    width: 55%;
+    height: 50%;
+    border: solid, rgb(38, 0, 255), 3px;
+    top: 5200px;
+    left: 35%;
+}
+
+#project-box-3 {
+    position: absolute;
+    width: 55%;
+    height: 50%;
+    border: solid, rgb(0, 255, 26), 3px;
+    top: 5200px;
+    left: 35%;
+}
+
+#project-box-4 {
+    position: absolute;
+    width: 55%;
+    height: 50%;
+    border: solid, rgb(251, 255, 0), 3px;
+    top: 5200px;
+    left: 35%;
+}
+
+#button-project-1 {
+    border: solid, rgb(0, 0, 0), 2px;
+    top: 5200px;
+    position: absolute;
+    left: 15%;
+    width: 15%;
+    height: 50px;
+}
+
+#button-project-2 {
+    border: solid, rgb(0, 0, 0), 2px;
+    top: 5250px;
+    position: absolute;
+    left: 15%;
+    width: 15%;
+    height: 50px;
+}
+
+#button-project-3 {
+    border: solid, rgb(0, 0, 0), 2px;
+    top: 5300px;
+    position: absolute;
+    left: 15%;
+    width: 15%;
+    height: 50px;
 }
 
 /*
