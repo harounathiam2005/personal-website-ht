@@ -87,7 +87,7 @@ document.addEventListener('scroll', function() {
     const logoBoxes = document.querySelectorAll('.company-logo-box');
     const scrollPosition = window.scrollY;
     const triggerPositionVisible = 800;
-    const triggerPositionInvisible = 2500;
+    const triggerPositionInvisible = 4000;
 
     logoBoxes.forEach(function(logoBox, index) {
 
@@ -104,8 +104,8 @@ document.addEventListener('scroll', function() {
     const numbersText = document.getElementById('numbers-text');
     const scrollPosition = window.scrollY;
     const triggerPositionVisible = 1400;
-    const triggerPositionInvisible = 2100;
-    const triggerPositionUnstick = 3000;
+    const triggerPositionInvisible = 3800;
+    const triggerPositionUnstick = 5000;
     const triggerPosition = 1400;
     const move = 20;
 
@@ -138,6 +138,46 @@ document.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     const triggerPosition = 1350;
     const triggerPositionInvisible = 2300;
+
+    if ((scrollPosition >= triggerPosition) && (scrollPosition < triggerPositionInvisible)) {
+        numbersText.classList.add('visible-move');
+    } else {
+        numbersText.classList.remove('visible-move');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+     
+    const descriptionBox = document.getElementById('description-box');
+
+    descriptionBox.addEventListener('mouseover', function() {
+        descriptionBox.style.boxShadow = '0 4px 6px -1px rgba(0.5, 0.5, 0.5, 0.5)';
+    });
+
+    descriptionBox.addEventListener('mouseout', function() {
+        descriptionBox.style.boxShadow = '0 4px 6px -1px rgba(0.2, 0.2, 0.2, 0.2)';
+    });
+
+});
+
+document.addEventListener('scroll', function() {
+    const numbersText = document.getElementById('linkedin-figure');
+    const scrollPosition = window.scrollY;
+    const triggerPosition = 2700;
+    const triggerPositionInvisible = 3800;
+
+    if ((scrollPosition >= triggerPosition) && (scrollPosition < triggerPositionInvisible)) {
+        numbersText.classList.add('visible-move');
+    } else {
+        numbersText.classList.remove('visible-move');
+    }
+});
+
+document.addEventListener('scroll', function() {
+    const numbersText = document.getElementById('amazon-figure');
+    const scrollPosition = window.scrollY;
+    const triggerPosition = 2900;
+    const triggerPositionInvisible = 3800;
 
     if ((scrollPosition >= triggerPosition) && (scrollPosition < triggerPositionInvisible)) {
         numbersText.classList.add('visible-move');
@@ -179,7 +219,7 @@ document.addEventListener('scroll', function() {
 document.addEventListener('scroll', function() {
     const backgroundSheet = document.getElementById('background-sheet');
     const scrollPosition = window.scrollY;
-    let targetPosition = 3000;
+    let targetPosition = 4300;
 
     if (scrollPosition >= targetPosition) {
         backgroundSheet.style.animation = 'reduceWidth .5s forwards';
@@ -196,7 +236,7 @@ document.addEventListener('scroll', function() {
     const body = document.body;
     const navBar = document.getElementById('nav-bar');
     const scrollPosition = window.scrollY;
-    let targetPosition = 3000;
+    let targetPosition = 4300;
 
     if (scrollPosition >= targetPosition && !hasAnimated) {
         body.style.animation = 'colorShift 0s forwards';

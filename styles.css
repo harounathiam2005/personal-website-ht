@@ -82,6 +82,7 @@ body {
 }
 
 #firstname {
+    color: black;
     font-family: 'Rubik', serif;
     font-size: 4.25vw;
     position: relative;
@@ -90,6 +91,7 @@ body {
 }
 
 #lastname {
+    color: black;
     position: relative;
     font-family: 'Rubik', serif;
     font-size: 6.7vw;
@@ -138,6 +140,7 @@ body {
 }
 
 #spacer {
+    color: black;
     position: relative;
     font-family: 'Rubik', serif;
     left: 42%;
@@ -217,7 +220,7 @@ body {
     position: absolute;
     border: var(--test-border);
     width: 100%;
-    height: 3000px;
+    height: 5000px;
 }
 
 .logo {
@@ -277,7 +280,7 @@ body {
     position: absolute;
     border: var(--test-border);
     width: 100%;
-    height: 2000px;
+    height: 4000px;
 }
 
 #description-box {
@@ -289,7 +292,7 @@ body {
     top: 50%;
     opacity: 0;
     color: black; /* Example color */
-    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 #description-box.visible-move {
@@ -300,10 +303,48 @@ body {
 #about-me {
     color: var(--text-theme-color);
     font-size: 1.5vw;
-}s
+}
 
-#highlights {
+.accent {
     color: var(--global-accent);
+}
+
+#linkedin-figure {
+    width: 85%;
+    height: 70px;
+    position: sticky;
+    top: 46%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out;
+}
+
+#linkedin-figure.visible-move {
+    opacity: 1;
+    margin-left: 15%; /* Move to the center */
+}
+
+#amazon-figure {
+    width: 85%;
+    height: 70px;
+    position: sticky;
+    top: 60%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out;
+}
+
+#amazon-figure.visible-move {
+    opacity: 1;
+    margin-left: 15%; /* Move to the center */
+}
+
+#scholarship {
+    font-size: 5vw;
+    color: var(--global-accent);
+}
+
+#scholarship-desc {
+    font-size: 2vw;
+    color: var(--text-theme-color);
 }
 
 #scholarship-box {
@@ -333,12 +374,6 @@ body {
     width: 100%;
 }
 
-#scholarship {
-    position: absolute;
-    font-size: 9vw;
-    color: var(--global-accent);
-}
-
 #by-text {
     font-size: 2vw;
     position: relative;
@@ -362,7 +397,7 @@ body {
     background-color:  rgb(255, 255, 255);
     width: 100vw;
     height: 1000vw;
-    top: 0;
+    top: 2000px;
     transform: translateY(-50%);
     z-index: -100;
 }
@@ -385,15 +420,6 @@ body {
     }
 }
 
-.blue-visibility {
-    opacity: 0;
-    transition: opacity, ease-in, 0.5s;
-}
-
-.blue-visibility.visible {
-    opacity: 1;
-}
-
 #projects-title {
     color: white;
     position: -webkit-sticky;
@@ -406,7 +432,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.5vw;
-    top: 3500px;
+    top: 4700px;
 }
 
 .line {
@@ -466,6 +492,7 @@ body {
 h1 {
     margin: 0;
     font-family: 'Nunito Sans', serif;
+    color: var(--text-theme-color);
 }
 
 p {
