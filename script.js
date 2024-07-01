@@ -87,7 +87,7 @@ document.addEventListener('scroll', function() {
     const logoBoxes = document.querySelectorAll('.company-logo-box');
     const scrollPosition = window.scrollY;
     const triggerPositionVisible = 800;
-    const triggerPositionInvisible = 4000;
+    const triggerPositionInvisible = 3700;
 
     logoBoxes.forEach(function(logoBox, index) {
 

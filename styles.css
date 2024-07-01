@@ -281,7 +281,7 @@ body {
 }
 
 #description-box {
-    width: 60%;
+    width: 75%;
     height: 350px;
     box-shadow: 0 4px 6px -1px rgba(0.2, 0.2, 0.2, 0.2);
     border-radius: 15px;
@@ -294,7 +294,7 @@ body {
 
 #description-box.visible-move {
     opacity: 1;
-    margin-left: 20%; /* Move to the center */
+    margin-left: 12.5%; /* Move to the center */
 }
 
 #about-me {
@@ -428,9 +428,8 @@ body {
 }
 
 .line {
-    color: aquamarine;
     width: 1px;
-
+    border: solid, aquamarine, 1px;
 }
 
 /*
