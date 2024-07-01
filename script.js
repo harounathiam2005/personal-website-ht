@@ -186,6 +186,19 @@ document.addEventListener('scroll', function() {
     }
 });
 
+document.addEventListener('scroll', function() {
+    const numbersText = document.getElementById('scholarship-figure');
+    const scrollPosition = window.scrollY;
+    const triggerPosition = 3100;
+    const triggerPositionInvisible = 3800;
+
+    if ((scrollPosition >= triggerPosition) && (scrollPosition < triggerPositionInvisible)) {
+        numbersText.classList.add('visible-move');
+    } else {
+        numbersText.classList.remove('visible-move');
+    }
+});
+
 /*
 document.addEventListener('scroll', function() {
     const scholarshipBox = document.getElementById('scholarship-box');
@@ -240,11 +253,11 @@ document.addEventListener('scroll', function() {
 
     if (scrollPosition >= targetPosition && !hasAnimated) {
         body.style.animation = 'colorShift 0s forwards';
-        navBar.style.animation = 'colorShift 2s forwards';
+        navBar.style.animation = 'colorShift 0.5s forwards';
         hasAnimated = true;
     } else if (scrollPosition < targetPosition && hasAnimated) {
-        body.style.animation = 'colorShiftBack 1s forwards';
-        navBar.style.animation = 'colorShiftBack 1s forwards';
+        body.style.animation = 'colorShiftBack .5s forwards';
+        navBar.style.animation = 'colorShiftBack 0.5s forwards';
         hasAnimated = false;
     }
 });

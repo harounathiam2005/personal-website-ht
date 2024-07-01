@@ -334,6 +334,20 @@ body {
     margin-left: 15%; /* Move to the center */
 }
 
+#scholarship-figure {
+    width: 85%;
+    height: 70px;
+    position: sticky;
+    top: 74%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in, margin-left 0.5s ease-in-out;
+}
+
+#scholarship-figure.visible-move {
+    opacity: 1;
+    margin-left: 15%; /* Move to the center */
+}
+
 #scholarship {
     font-size: 5vw;
     color: var(--global-accent);
