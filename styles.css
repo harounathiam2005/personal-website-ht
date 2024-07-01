@@ -218,7 +218,6 @@ body {
 #middle-container {
     top: 1250px;
     position: absolute;
-    border: var(--test-border);
     width: 100%;
     height: 5000px;
 }
@@ -232,7 +231,6 @@ body {
     position: sticky;
     height: var(--logo-square-dim);
     width: 100%;
-    border: var(--test-border);
     top: 150px;
 }
 
@@ -278,7 +276,6 @@ body {
 #middle-container-2 {
     top: 1600px;
     position: absolute;
-    border: var(--test-border);
     width: 100%;
     height: 4000px;
 }
@@ -348,7 +345,6 @@ body {
 }
 
 #scholarship-box {
-    /* border: var(--test-border); */
     position: absolute;
     top: 2000px;
     width: 100%;
@@ -356,10 +352,8 @@ body {
     opacity: 0;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    /* border: 1px, black, dotted; */
     height: 9vw;
     transition: opacity 0.7s ease-in, bottom 0.5s ease-in;
-    border: var(--test-border);
 }
 
 #scholarship-box.stick {
@@ -424,15 +418,13 @@ body {
     color: white;
     position: -webkit-sticky;
     position: absolute;
-    border: var(--test-border);
-    /* border: var(--test-border); */
     width: 100vw;
     height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5vw;
-    top: 4700px;
+    top: 5000px;
 }
 
 .line {
