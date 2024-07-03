@@ -474,11 +474,20 @@ body {
     border-radius: 15px;
 }
 
+/* Cannot get smaller as window shrinks */
+.button {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    left: 12%;
+    width: 18%;
+}
+
 #button-project-1 {
     top: 5200px;
     position: absolute;
-    left: 15%;
-    width: 15%;
     height: 50px;
     border-radius: 15px 15px 0 0;
     background-color: rgb(144, 144, 144);
@@ -494,8 +503,6 @@ body {
 #button-project-2 {
     top: 5250px;
     position: absolute;
-    left: 15%;
-    width: 15%;
     height: 50px;
     background-color: rgb(144, 144, 144);
     opacity: 0.3;
@@ -510,8 +517,6 @@ body {
 #button-project-3 {
     top: 5300px;
     position: absolute;
-    left: 15%;
-    width: 15%;
     height: 50px;
     background-color: rgb(144, 144, 144);
     opacity: 0.3;
@@ -527,8 +532,8 @@ body {
 #button-outline {
     top: 5200px;
     position: absolute;
-    left: 15%;
-    width: 15%;
+    left: 12%;
+    width: 18%;
     height: 150px;
     border-radius: 15px;
     box-shadow: 0 4px 6px -1px rgba(0.2, 0.2, 0.2, 0.2);
