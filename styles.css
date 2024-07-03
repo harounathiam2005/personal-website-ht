@@ -449,67 +449,90 @@ body {
     position: absolute;
     width: 55%;
     height: 50%;
-    border: solid, red, 3px;
+    border-radius: 15px;
     top: 5200px;
     left: 35%;
-}
-
-#project-box-1.visible {
-    opacity: 1;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0.2, 0.2, 0.2, 0.2);
 }
 
 #project-box-2 {
     position: absolute;
     width: 55%;
     height: 50%;
-    border: solid, rgb(38, 0, 255), 3px;
     top: 5200px;
     left: 35%;
+    border-radius: 15px;
 }
 
 #project-box-3 {
     position: absolute;
     width: 55%;
     height: 50%;
-    border: solid, rgb(0, 255, 26), 3px;
     top: 5200px;
     left: 35%;
-}
-
-#project-box-4 {
-    position: absolute;
-    width: 55%;
-    height: 50%;
-    border: solid, rgb(251, 255, 0), 3px;
-    top: 5200px;
-    left: 35%;
+    border-radius: 15px;
 }
 
 #button-project-1 {
-    border: solid, rgb(0, 0, 0), 2px;
     top: 5200px;
     position: absolute;
     left: 15%;
     width: 15%;
     height: 50px;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(144, 144, 144);
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in, box-shadow 0.3s ease-in-out;
+}
+
+#button-project-1.hover {
+    opacity: 0.5;
+    box-shadow: 0 4px 6px -1px rgba(0.4, 0.4, 0.4, 0.4);
 }
 
 #button-project-2 {
-    border: solid, rgb(0, 0, 0), 2px;
     top: 5250px;
     position: absolute;
     left: 15%;
     width: 15%;
     height: 50px;
+    background-color: rgb(144, 144, 144);
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in, box-shadow 0.3s ease-in-out;
+}
+
+#button-project-2.hover {
+    opacity: 0.5;
+    box-shadow: 0 4px 6px -1px rgba(0.4, 0.4, 0.4, 0.4);
 }
 
 #button-project-3 {
-    border: solid, rgb(0, 0, 0), 2px;
     top: 5300px;
     position: absolute;
     left: 15%;
     width: 15%;
     height: 50px;
+    background-color: rgb(144, 144, 144);
+    opacity: 0.3;
+    border-radius:  0 0 15px 15px;
+    transition: opacity 0.3s ease-in, box-shadow 0.3s ease-in-out;
+}
+
+#button-project-3.hover {
+    opacity: 0.5;
+    box-shadow: 0 4px 6px -1px rgba(0.4, 0.4, 0.4, 0.4);
+}
+
+#button-outline {
+    top: 5200px;
+    position: absolute;
+    left: 15%;
+    width: 15%;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0.2, 0.2, 0.2, 0.2);
+    z-index: -10;
 }
 
 /*

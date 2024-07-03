@@ -261,3 +261,33 @@ document.addEventListener('scroll', function() {
         hasAnimated = false;
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttonProject1 = document.getElementById('button-project-1');
+    const buttonProject2 = document.getElementById('button-project-2');
+    const buttonProject3 = document.getElementById('button-project-3');
+
+        buttonProject1.addEventListener('mouseover', function() {
+            buttonProject1.classList.add('hover');
+        });
+
+        buttonProject1.addEventListener('mouseout', function() {
+            buttonProject1.classList.remove('hover');
+        });
+
+        buttonProject2.addEventListener('mouseover', function() {
+            buttonProject2.classList.add('hover');
+        });
+
+        buttonProject2.addEventListener('mouseout', function() {
+            buttonProject2.classList.remove('hover');
+        });
+
+        buttonProject3.addEventListener('mouseover', function() {
+            buttonProject3.classList.add('hover');
+        });
+
+        buttonProject3.addEventListener('mouseout', function() {
+            buttonProject3.classList.remove('hover');
+        });
+});
