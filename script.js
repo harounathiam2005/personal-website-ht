@@ -263,6 +263,24 @@ document.addEventListener('scroll', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    const projectBox1 = document.getElementById('project-box-1');
+
+    projectBox1.addEventListener('mouseover', function() {
+        console.log('Hovering')
+        projectBox1.classList.add('hover');
+    });
+
+    projectBox1.addEventListener('mouseout', function() {
+        console.log('Not hovering')
+        projectBox1.classList.remove('hover');
+    });
+
+});
+
+/*
+
+document.addEventListener('DOMContentLoaded', function() {
     const buttonProject1 = document.getElementById('button-project-1');
     const buttonProject2 = document.getElementById('button-project-2');
     const buttonProject3 = document.getElementById('button-project-3');
@@ -291,3 +309,20 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonProject3.classList.remove('hover');
         });
 });
+
+// button switch logic
+
+
+first button on click:
+    change properties of button 1
+    set first project view opacity 1
+first button off click:
+    change properties of button 1
+    set first project view opacity 0
+second button on click:
+    change properties of button 2
+    set first project view opacity 2
+third button on click:
+    change properties of button 3
+    set first project view opacity 3
+*/
